@@ -1,0 +1,146 @@
+name: "VGG16"
+batch: 3
+layers:
+- name: "conv1"
+  width: 224
+  height: 224
+  in_chan: 1
+  out_chan: 64
+  kernel: 3
+  stride: 1
+  compression:
+    input: 0.99
+    output: 0.90
+    weight: 0.58
+- name: "conv2"
+  width: 224
+  height: 224
+  in_chan: 64
+  out_chan: 64
+  kernel: 3
+  stride: 1
+  compression:
+    input: 0.57
+    output: 0.86
+    weight: 0.22
+- name: "conv3"
+  width: 112
+  height: 112
+  in_chan: 64
+  out_chan: 128
+  kernel: 3
+  stride: 1
+  compression:
+    input: 0.78
+    output: 0.89
+    weight: 0.34
+- name: "conv4"
+  width: 112
+  height: 112
+  in_chan: 128
+  out_chan: 128
+  kernel: 3
+  stride: 1
+  compression:
+    input: 0.65
+    output: 0.90
+    weight: 0.36
+- name: "conv5"
+  width: 56
+  height: 56
+  in_chan: 128
+  out_chan: 256
+  kernel: 3
+  stride: 1
+  compression:
+    input: 0.64
+    output: 0.88
+    weight: 0.53
+- name: "conv6"
+  width: 56
+  height: 56
+  in_chan: 256
+  out_chan: 256
+  kernel: 3
+  stride: 1
+  compression:
+    input: 0.48
+    output: 0.89
+    weight: 0.24
+- name: "conv7"
+  width: 56
+  height: 56
+  in_chan: 256
+  out_chan: 256
+  kernel: 3
+  stride: 1
+  compression:
+    input: 0.47
+    output: 0.84
+    weight: 0.42
+- name: "conv8"
+  width: 28
+  height: 28
+  in_chan: 256
+  out_chan: 512
+  kernel: 3
+  stride: 1
+  compression:
+    input: 0.42
+    output: 0.85
+    weight: 0.32
+- name: "conv9"
+  width: 28
+  height: 28
+  in_chan: 512
+  out_chan: 512
+  kernel: 3
+  stride: 1
+  compression:
+    input: 0.33
+    output: 0.85
+    weight: 0.27
+- name: "conv10"
+  width: 28
+  height: 28
+  in_chan: 512
+  out_chan: 512
+  kernel: 3
+  stride: 1
+  compression:
+    input: 0.23
+    output: 0.85
+    weight: 0.34
+- name: "conv11"
+  width: 14
+  height: 14
+  in_chan: 512
+  out_chan: 512
+  kernel: 3
+  stride: 1
+  compression:
+    input: 0.29
+    output: 0.87
+    weight: 0.35
+- name: "conv12"
+  width: 14
+  height: 14
+  in_chan: 512
+  out_chan: 512
+  kernel: 3
+  stride: 1
+  compression:
+    input: 0.21
+    output: 0.86
+    weight: 0.29
+- name: "conv13"
+  width: 14
+  height: 14
+  in_chan: 512
+  out_chan: 512
+  kernel: 3
+  stride: 1
+  compression:
+    input: 0.20
+    output: 0.86
+    weight: 0.36
