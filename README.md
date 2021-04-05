@@ -43,15 +43,17 @@ pip3 install --user -r requirements.txt
 
 ### Options
 
-1. Network configuration file (`-n` or `--network`)
+1. `-n` or `--network`: Network configuration file
 
     This file contains network information, including name, batch size, and layers. Currently, CDA only supports convolution operations. This file is written in YAML.
 
-2. On-chip memory size (`-s` or `--size`)
+2. `-s` or `--size` (default=108): On-chip memory size (KB)
 
-3. Result folder (`-d` or `--dir`)
+3. `-d` or `--dir` (default=results/_{network name}_/): Search result folder
 
     The search results of each layer are saved in this folder. This file is also written in YAML.
+
+    The _network name_ in the default path comes from the network configuration file.
 
 ### Example
 
