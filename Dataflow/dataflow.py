@@ -15,7 +15,7 @@ if TYPE_CHECKING:
     from typing import Generator, Tuple
 
 
-class DataflowGeneratorFactory(ABC):
+class DataflowGenerator(ABC):
     @classmethod
     def create_generator(cls, param: Param) -> Generator:
         cls._param = param
@@ -55,7 +55,7 @@ class DataflowGeneratorFactory(ABC):
         raise NotImplementedError
 
 
-class ConvDataflowGenerator(DataflowGeneratorFactory):
+class ConvDataflowGenerator(DataflowGenerator):
     @classmethod
     def __insert_weight_load(cls, loop: Loop, checker: dict, visit: dict, outers: list):
         if (
@@ -124,7 +124,7 @@ class ConvDataflowGenerator(DataflowGeneratorFactory):
             cls.__insert_output_ops(loop, checker, visit, outers)
 
 
-class PoolDataflowGenerator(DataflowGeneratorFactory):
+class PoolDataflowGenerator(DataflowGenerator):
     pass
 
 
